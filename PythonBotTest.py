@@ -50,7 +50,7 @@ while 1:
 
     if text.find("PING :") != -1:
         irc.send(("PONG " + text.split() [1] + "\r\n").encode())
-        print("PONG has successfully been sent back to: "+ (server))
+        print("PONG has successfully been sent back to: network")
         print("")
 
     if "376" in svrtext:
