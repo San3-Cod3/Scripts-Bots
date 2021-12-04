@@ -18,3 +18,26 @@ Scripts and Bots
             ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
 
 ### vHost/bold+coloured vHost - owner string quit section (END) ###
+
+
+# ¦¦¦ #
+
+
+### vHost/bold+coloured vHost - owner string change botnick section (START) ###
+
+    Quit_Stuff2 = text.strip('\n\r') # Removing any unnecessary linebreaks.
+
+    name2 = Quit_Stuff2.split(' ',1)[0][1:] # We split out the name
+
+    if name2.lower() == owner.lower() and Quit_Stuff2.find(':!nick') != -1:
+        nickname = text.split(':!nick')
+        if len(nickname) < 2:
+            pass
+        else:
+            nicknames = nickname[1].strip()
+            ircwrite('NICK '+ (nicknames) +'\r\n')
+    else:
+        if name2.lower() != owner.lower() and Quit_Stuff2.find(':!nick') != -1:
+            ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
+
+### vHost/bold+coloured vHost - owner string change botnick section (END) ###
