@@ -70,11 +70,11 @@ while 1:
         ircwrite('PRIVMSG '+channel+' :'+str(to)+'! \r\n')
     # DEBUG COMMAND ######################################
     
-    if text.find(':!date') != -1:
-        sendm('[+] Date: '+ time.strftime("%A, %d %B [month #%m], %Y", time.localtime()))
-
     if text.find(':!time') != -1:
         sendm('[+] Time: '+ time.strftime("%H:%M:%S", time.localtime()))
+    
+    if text.find(':!date') != -1:
+        sendm('[+] Date: '+ time.strftime("%A, %d %B [month #%m], %Y", time.localtime()))
 
 ### owner string quit section (START) ###
 
@@ -90,3 +90,24 @@ while 1:
             ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
 
 ### owner string quit section (END) ###
+
+# ¦¦¦
+
+### owner string change botnick section (START) ###
+
+    Quit_Stuff2 = text.strip('\n\r') # Removing any unnecessary linebreaks.
+
+    name2 = Quit_Stuff2.split('!',1)[0][1:] # We split out the name
+
+    if name2.lower() == owner.lower() and Quit_Stuff2.find(':!nick') != -1:
+        nickname = text.split(':!nick')
+        if len(nickname) < 2:
+            pass
+        else:
+            nicknames = nickname[1].strip()
+            ircwrite('NICK '+ (nicknames) +'\r\n')
+    else:
+        if name2.lower() != owner.lower() and Quit_Stuff2.find(':!nick') != -1:
+            ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
+
+### owner string change botnick section (END) ###
