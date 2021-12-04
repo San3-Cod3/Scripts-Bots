@@ -30,7 +30,11 @@ channel = "#youkay"
 
 owner = "you"
 
-irc.connect((server, port)) # Connects to the server | change 'server', 'port' to your stuff
+server = "irc.lame.***"
+
+port = 6667
+
+irc.connect((server, port)) # Connects to the server | change 'server', 'port' just above here to your stuff
 
 ircwrite("USER "+ ident +" "+ botnick +" "+ botnick +" :Real_Name-LAME \r\n")
 ircwrite("NICK "+ botnick +"\r\n")
