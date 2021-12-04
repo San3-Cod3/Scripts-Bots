@@ -1,3 +1,8 @@
+# Triggers: <usage> !time ¦ displays time in channel | <usage> !date ¦ displays date in channel / 
+| <usage> quit botnick ¦ owner only, makes the bot quit IRC / 
+| <usage> !nick (ChoiceOfNicknameForBotToSwitchTo) ¦ owner only, makes the bot change nick / 
+| <usage> !spit ¦ debug, explained at length on main page
+
 import sys                # 1
 import os                 # 2
 import time               # 3
