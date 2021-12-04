@@ -91,7 +91,7 @@ while 1:
 
 ### owner string quit section (END) ###
 
-# ¦¦¦
+# ¦¦¦ #
 
 ### owner string change botnick section (START) ###
 
