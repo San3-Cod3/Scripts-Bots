@@ -8,7 +8,7 @@ import http.client        # 7
 import re                 # 8
 import socket             # 9
 
-irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Defines the socket
 
 def ircwrite(message):
     global irc
