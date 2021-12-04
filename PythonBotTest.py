@@ -108,6 +108,6 @@ if name2.lower() == owner.lower() and Nick_Stuff.find(':!nick') != -1:
         ircwrite('NICK '+ (nicknames) +'\r\n')
 else:
     if name2.lower() != owner.lower() and Nick_Stuff.find(':!nick') != -1:
-        ircwrite("PRIVMSG "+ channel +" :You do NOT match master string! \r\n")
+        ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
 
 ### owner string change botnick section (END) ###
