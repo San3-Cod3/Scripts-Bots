@@ -1,4 +1,4 @@
-# Triggers: <usage> !time ¦ displays time in channel | <usage> !date ¦ displays date in channel / 
+# Triggers: <usage> !time ¦ public, displays time in channel | <usage> !date ¦ public, displays date in channel / 
 #| <usage> quit botnick ¦ owner only, makes the bot quit IRC / 
 #| <usage> !nick (ChoiceOfNicknameForBotToSwitchTo) ¦ owner only, makes the bot change nick / 
 #| <usage> !spit ¦ debug, explained at length on main page
