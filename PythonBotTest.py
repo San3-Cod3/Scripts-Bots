@@ -4,6 +4,9 @@
 #| <usage> !spit ¦ debug, explained at length on main page
 
 
+# ########################### #
+# V Built-In Package Import V #
+# ########################### #
 import sys                # 1
 import os                 # 2
 import time               # 3
@@ -13,9 +16,14 @@ import uuid               # 6
 import http.client        # 7
 import re                 # 8
 import socket             # 9
+# ########################### #
+# ^ Built-In Package Import ^ #
+# ########################### #
 
 
+###                                                                      ###
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Defines the socket
+###                                                                      ###
 
 
 # ######################## #
