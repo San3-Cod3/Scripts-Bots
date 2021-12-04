@@ -23,7 +23,7 @@ Scripts and Bots
 # ¦¦¦ #
 
 
-### vHost/bold+coloured vHost - master string change botnick section (START) ###
+### vHost/bold+coloured vHost -- master string change botnick section (START) ###
 
     Nick_Stuff = text.strip('\n\r') # Removing any unnecessary linebreaks.
 
@@ -40,4 +40,4 @@ Scripts and Bots
         if name2.lower() != master.lower() and Nick_Stuff.find(':!nick') != -1:
             ircwrite("PRIVMSG "+ channel +" :You do NOT match master string! \r\n")
 
-### vHost/bold+coloured vHost - master string change botnick section (END) ###
+### vHost/bold+coloured vHost -- master string change botnick section (END) ###
