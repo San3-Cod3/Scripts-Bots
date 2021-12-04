@@ -3,6 +3,7 @@
 #| <usage> !nick (ChoiceOfNicknameForBotToSwitchTo) ¦ owner only, makes the bot change nick / 
 #| <usage> !spit ¦ debug, explained at length on main page
 
+
 import sys                # 1
 import os                 # 2
 import time               # 3
@@ -13,8 +14,11 @@ import http.client        # 7
 import re                 # 8
 import socket             # 9
 
+
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Defines the socket
 
+
+#v Functions, Essential v#
 def ircwrite(message):
     global irc
     irc.send(str(message).encode('utf-8'))
@@ -26,6 +30,8 @@ def sendm(msg):
 
 def quitting():
   ircwrite("PRIVMSG "+ channel +" :Okay boss, leaving now.\n")
+#^ Functions, Essential ^#
+
 
 botnick = "test__bot"
 
