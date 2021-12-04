@@ -28,7 +28,7 @@ ident = "testident"
 
 channel = "#youkay"
 
-owner = "you"
+owner = "Your__Nick"
 
 server = "irc.lame.***"
 
@@ -64,6 +64,12 @@ while 1:
 # My commands #
 # ########### #
 
+    # DEBUG COMMAND ######################################
+    if text.find(':!spit') !=-1:
+        to = text.split(":!spit",1)
+        ircwrite('PRIVMSG '+channel+' :'+str(to)+'! \r\n')
+    # DEBUG COMMAND ######################################
+    
     if text.find(':!date') != -1:
         sendm('[+] Date: '+ time.strftime("%A, %d %B [month #%m], %Y", time.localtime()))
 
