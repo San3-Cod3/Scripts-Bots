@@ -15,7 +15,7 @@ Scripts and Bots
         irc.send(bytes("QUIT \n", "UTF-8"))
     else:
         if name.lower() != master.lower() and Quit_Stuff.find(":quit " + botnick) != -1:
-            ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
+            ircwrite("PRIVMSG "+ channel +" :You do NOT match master string! \r\n")
 
 ### vHost/bold+coloured vHost - owner string quit section (END) ###
 
@@ -29,7 +29,7 @@ Scripts and Bots
 
     name2 = Quit_Stuff2.split(' ',1)[0][1:] # We split out the name
 
-    if name2.lower() == owner.lower() and Quit_Stuff2.find(':!nick') != -1:
+    if name2.lower() == master.lower() and Quit_Stuff2.find(':!nick') != -1:
         nickname = text.split(':!nick')
         if len(nickname) < 2:
             pass
@@ -37,7 +37,7 @@ Scripts and Bots
             nicknames = nickname[1].strip()
             ircwrite('NICK '+ (nicknames) +'\r\n')
     else:
-        if name2.lower() != owner.lower() and Quit_Stuff2.find(':!nick') != -1:
-            ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
+        if name2.lower() != master.lower() and Quit_Stuff2.find(':!nick') != -1:
+            ircwrite("PRIVMSG "+ channel +" :You do NOT match master string! \r\n")
 
 ### vHost/bold+coloured vHost - owner string change botnick section (END) ###
