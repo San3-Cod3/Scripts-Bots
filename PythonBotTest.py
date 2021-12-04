@@ -106,8 +106,8 @@ while 1:
         else:
             nicknames = nickname[1].strip()
             ircwrite('NICK '+ (nicknames) +'\r\n')
-else:
-    if name2.lower() != owner.lower() and Nick_Stuff.find(':!nick') != -1:
-        ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
+    else:
+        if name2.lower() != owner.lower() and Nick_Stuff.find(':!nick') != -1:
+            ircwrite("PRIVMSG "+ channel +" :You do NOT match owner string! \r\n")
 
 ### owner string change botnick section (END) ###
