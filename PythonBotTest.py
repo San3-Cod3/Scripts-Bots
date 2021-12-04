@@ -99,7 +99,7 @@ while 1:
 
 name2 = Nick_Stuff.split('!',1)[0][1:] # We split out the name
 
-if name2.lower() == master.lower() and Nick_Stuff.find(':!nick') != -1:
+if name2.lower() == owner.lower() and Nick_Stuff.find(':!nick') != -1:
     nickname = text.split(':!nick')
     if len(nickname) < 2:
         pass
@@ -107,7 +107,7 @@ if name2.lower() == master.lower() and Nick_Stuff.find(':!nick') != -1:
         nicknames = nickname[1].strip()
         ircwrite('NICK '+ (nicknames) +'\r\n')
 else:
-    if name2.lower() != master.lower() and Nick_Stuff.find(':!nick') != -1:
+    if name2.lower() != owner.lower() and Nick_Stuff.find(':!nick') != -1:
         ircwrite("PRIVMSG "+ channel +" :You do NOT match master string! \r\n")
 
 ### owner string change botnick section (END) ###
