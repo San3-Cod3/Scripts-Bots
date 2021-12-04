@@ -18,7 +18,9 @@ import socket             # 9
 irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Defines the socket
 
 
-#v Functions, Essential v#
+# ######################## #
+# V Functions, Essential V #
+# ######################## #
 def ircwrite(message):
     global irc
     irc.send(str(message).encode('utf-8'))
@@ -30,7 +32,9 @@ def sendm(msg):
 
 def quitting():
   ircwrite("PRIVMSG "+ channel +" :Okay boss, leaving now.\n")
-#^ Functions, Essential ^#
+# ######################## #
+# ^ Functions, Essential ^ #
+# ######################## #
 
 
 botnick = "test__bot"
