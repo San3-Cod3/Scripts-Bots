@@ -7,23 +7,23 @@
 # ########################### #
 # V Built-In Package Import V #
 # ########################### #
-import sys                # 1
-import os                 # 2
-import time               # 3
-from datetime import date # 4
-import random             # 5
-import uuid               # 6
-import http.client        # 7
-import re                 # 8
-import socket             # 9
+import sys                # 1 #
+import os                 # 2 #
+import time               # 3 #
+from datetime import date # 4 #
+import random             # 5 #
+import uuid               # 6 #
+import http.client        # 7 #
+import re                 # 8 #
+import socket             # 9 #
 # ########################### #
 # ^ Built-In Package Import ^ #
 # ########################### #
 
 
-###                                                                      ###
-irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Defines the socket
-###                                                                      ###
+###                                                                             ###
+irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Defines the Socket Object
+###                                                                             ###
 
 
 # ######################## #
@@ -44,7 +44,9 @@ def quitting():
 # ^ Functions, Essential ^ #
 # ######################## #
 
-
+# ################## #
+# Defining Variables #
+# ################## #
 botnick = "test__bot"
 
 ident = "testident"
@@ -56,8 +58,11 @@ owner = "Your__Nick"
 server = "irc.lame.***"
 
 port = 6667
+# ################## #
+# Defining Variables #
+# ################## #
 
-irc.connect((server, port)) # Connects to the server | change 'server', 'port' just above here to your stuff
+irc.connect((server, port)) # Socket Object connects to the server | change 'server', 'port' just above here, under Variables, to your stuff
 
 ircwrite("USER "+ ident +" "+ botnick +" "+ botnick +" :Real_Name-LAME \r\n")
 ircwrite("NICK "+ botnick +"\r\n")
