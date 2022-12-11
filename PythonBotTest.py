@@ -44,9 +44,10 @@ def quitting():
 # ^ Functions, Essential ^ #
 # ######################## #
 
-# ################## #
-# Defining Variables #
-# ################## #
+
+# ###################### #
+# v Defining Variables v #
+# ###################### #
 botnick = "test__bot"
 
 ident = "testident"
@@ -58,9 +59,10 @@ owner = "Your__Nick"
 server = "irc.lame.***"
 
 port = 6667
-# ################## #
-# Defining Variables #
-# ################## #
+# ###################### #
+# ^ Defining Variables ^ #
+# ###################### #
+
 
 irc.connect((server, port)) # Socket Object connects to the server | change 'server', 'port' just above here, under Variables, to your stuff
 
